@@ -6,9 +6,6 @@ import org.junit.Test;
 
 public class LinkedHashMapTest {
 
-	/**
-	 * Usecase2 for finding frequency of paranoid
-	 */
 	@Test
 	public void givenASentence_WhenWordsAreAddedToList_ShouldReturnParanoidFrequency() {
 		String sentence = "Paranoids are not paranoid because they are paranoid "
@@ -26,8 +23,9 @@ public class LinkedHashMapTest {
 		}
 		int frequency = map.get("paranoid");
 		System.out.println(map);
+		map.remove("avoidable"); 							//Removing the "avoidable" node from the list
+		System.out.println(map);
 		assertEquals(3, frequency);
-	}
 
-
+}
 }
